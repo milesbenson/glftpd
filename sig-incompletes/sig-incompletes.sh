@@ -126,7 +126,7 @@ function rescan_it () {
         if [ -d "$1" ]; then
                 echo "rescanning $1"
                 rescan_dir=${1#$gl_root}
-                /glftpd/bin/rescan --chroot=$gl_root --dir=$rescan_dir --normal >/dev/null 2>&1
+                $gl_root/bin/rescan --chroot=$gl_root --dir=$rescan_dir --normal >/dev/null 2>&1
         fi
 }
 
